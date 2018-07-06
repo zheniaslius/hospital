@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="node_modules/reset-css/reset.css">
+    <link rel="stylesheet" href="dist/styles/main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:400,500,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <i class="fas fa-hospital"></i>
+                <i class="fas fa-sign-out-alt"></i>
+            </nav>
+            <div class="logo">
+                <i class="far fa-hospital"></i>
+                <span class="name">Clinic</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="date-picker">
+                <div class="action-desc">
+                    <span class="action small">Pick a date</span>
+                    <span class="action show-all">Show all</span>
+                </div>
+                <div class="option-list">
+                    <div class="option">
+                        <span class="day-of-week">Today</span>
+                        <span class="day-num number">7</span>
+                    </div>
+                    <div class="option">
+                        <span class="day-of-week">Tomorrow</span>
+                        <span class="day-num number">8</span>
+                    </div>
+                    <div class="option">
+                        <span class="day-of-week">Tuesday</span>
+                        <span class="day-num number">9</span>
+                    </div>
+                    <div class="option">
+                        <span class="day-of-week">Wednesday</span>
+                        <span class="day-num number">10</span>
+                    </div>
+                    <div class="option">
+                        <span class="day-of-week">Thursday</span>
+                        <span class="day-num number">11</span>
+                    </div>
+                    <div class="option">
+                        <span class="day-of-week">Friday</span>
+                        <span class="day-num number">12</span>
+                    </div>
+                    <div class="option">
+                        <span class="day-of-week">Saturday</span>
+                        <span class="day-num number">13</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="time-picker">
+                <span class="action-desc small">Pick a time</span>
+
+                <div class="from-to">
+                    <div class="picker">
+                        <span>From</span>
+                        <!-- <div class="picker__slot">
+
+                            <div class="picker__controls">
+                                <input type="text" class="picker__input" value="08:00" alt="Type time in hours and minutes" maxlength="5" role="combobox"
+                                    aria-haspopup="listbox" aria-owns="pickerlist" aria-autocomplete="none" aria-expanded="false">
+                                <ol class="picker__list" id="pickerlist" tabindex="0" role="listbox" aria-labelledby="pickerheader" aria-activedescendant="">
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi1">00:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi2">00:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi3">01:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi4">01:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi5">02:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi6">02:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi7">03:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi8">03:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi9">04:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi10">04:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi11">05:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi12">05:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi13">06:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi14">06:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi15">07:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi16">07:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi17">08:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi18">08:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi19">09:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi20">09:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi21">10:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi22">10:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi23">11:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi24">11:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi25">12:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi26">12:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi27">13:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi28">13:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi29">14:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi30">14:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi31">15:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi32">15:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi33">16:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi34">16:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi35">17:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi36">17:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi37">18:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi38">18:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi39">19:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi40">19:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi41">20:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi42">20:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi43">21:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi44">21:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi45">22:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi46">22:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi47">23:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi48">23:30</li>
+                                </ol>
+                            </div>
+
+                            <button type="button" class="picker__increment" data-time="-00:05" aria-label="Reduce time by 5 minutes" title="-5 minutes">
+                                <i class="material-icons">keyboard_arrow_left</i>
+                            </button>
+                            <button type="button" class="picker__increment" data-time="+00:05" aria-label="Increase time by 5 minutes" title="+ 5 minutes">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </button>
+                        </div> -->
+                    </div>
+                    <div class="picker">
+                        <span>To</span>
+                        <div class="picker__slot">
+
+                            <!-- <div class="picker__controls">
+                                <input type="text" class="picker__input" value="08:00" alt="Type time in hours and minutes" maxlength="5" role="combobox"
+                                    aria-haspopup="listbox" aria-owns="pickerlist" aria-autocomplete="none" aria-expanded="false">
+                                <ol class="picker__list" id="pickerlist" tabindex="0" role="listbox" aria-labelledby="pickerheader" aria-activedescendant="">
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi1">00:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi2">00:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi3">01:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi4">01:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi5">02:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi6">02:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi7">03:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi8">03:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi9">04:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi10">04:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi11">05:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi12">05:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi13">06:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi14">06:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi15">07:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi16">07:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi17">08:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi18">08:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi19">09:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi20">09:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi21">10:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi22">10:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi23">11:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi24">11:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi25">12:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi26">12:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi27">13:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi28">13:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi29">14:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi30">14:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi31">15:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi32">15:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi33">16:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi34">16:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi35">17:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi36">17:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi37">18:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi38">18:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi39">19:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi40">19:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi41">20:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi42">20:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi43">21:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi44">21:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi45">22:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi46">22:30</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi47">23:00</li>
+                                    <li tabindex="-1" role="option" aria-selected="false" class="picker__item" id="pi48">23:30</li>
+                                </ol>
+                            </div>
+
+                            <button type="button" class="picker__increment" data-time="-00:05" aria-label="Reduce time by 5 minutes" title="-5 minutes">
+                                <i class="material-icons">keyboard_arrow_left</i>
+                            </button>
+                            <button type="button" class="picker__increment" data-time="+00:05" aria-label="Increase time by 5 minutes" title="+ 5 minutes">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </button> -->
+                        </div>
+                    </div>
+
+                    <i class="material-icons add-icon"> add_circle</i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="doc-info">
+            <img class="photo" src="https://leonardo.osnova.io/0c1989f9-9581-bc84-c09a-914ebc2bc1b0/-/resize/590/-/quality/lightest/"></img>
+            <span class="name">Garold Smile</span>
+        </div>
+
+        <div class="footer-end">
+            <div class="details">
+                <span class="capt small">Job position</span>
+                <span class="info">Therapist</span>
+            </div>
+
+            <div class="details cell-number">
+                <span class="capt small">Phone number</span>
+                <span class="info">(452) 892-3370</span>
+            </div>
+
+            <button class="btn-book">Shop</button>
+        </div>
+    </footer>
+
+    <script src="./dist/js/timepicker.js"></script>
+
+
+</body>
+
+</html>

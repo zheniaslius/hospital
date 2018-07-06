@@ -1,0 +1,150 @@
+@import globals
+@import vars
+@import timepicker
+
+header
+    background: url("/src/img/pexels-photo-1029614.jpeg") center no-repeat
+    color: white
+    font-size: 2em
+
+    nav
+        display: flex
+        justify-content: space-between
+
+    .logo
+        display: flex
+        flex-direction: column
+        align-items: center
+
+        .fa-hospital
+            padding: 40px
+            background-color: $orange
+            border-radius: 50%
+
+        .name
+            margin-top: 20px
+            font-weight: 400
+            letter-spacing: 4px
+
+main
+    font-weight: 600
+
+    .action-desc
+        margin-bottom: 40px
+        display: flex
+        justify-content: space-between
+
+        .show-all
+            color: $orange
+    
+    .option-list
+        margin-bottom: 80px
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr))
+        grid-template-rows: auto
+        grid-gap: 20px
+
+        .option
+            display: flex
+            flex-direction: column
+            align-items: center
+            min-width: 180px
+            padding: 30px 0
+            outline: 1px solid $light-grey
+            cursor: pointer
+            transition: box-shadow .3s
+
+            &:focus, &:hover
+                outline: 2px solid $orange
+                box-shadow: $glowy-orange
+
+            .day-of-week
+                color: $grey
+    
+    .time-picker
+        
+        .from-to
+            display: flex
+            align-items: center
+
+            .picker
+                margin-right: 60px
+
+            span, .add-icon
+                text-transform: none
+                margin-right: 20px
+                font-weight: normal
+                font-size: 2.5rem
+
+            .add-icon
+                margin-left: 20px
+
+                &:hover, &:focus
+                    cursor: pointer
+                    color: $orange
+
+footer
+    font: 1.5rem "Lato"
+    border-style: inset
+    border-left: 7px solid $orange
+    display: flex
+    justify-content: space-between
+    height: 135px
+    box-shadow: 0px -1px 70px -24px rgba(0,0,0,0.49)
+
+    .doc-info
+        padding-left: 40px
+        display: flex
+        align-items: center
+
+        .photo
+            height: 80px
+            width: 80px
+            object-fit: cover
+            border-radius: 50%
+            margin-right: 20px
+        
+        .name
+            text-transform: none
+            font-weight: 500
+    
+    .footer-end
+        display: flex
+
+    .details
+        padding: 30px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        border-right: 1px solid $light-grey 
+        border-left: 1px solid $light-grey
+
+        .capt
+            position: relative
+            bottom: 30px
+            color: $grey
+            font-weight: bold
+            font-family: "Raleway"
+
+        .info
+            text-transform: none
+        
+        &.cell-number
+            border: none
+        
+    .btn-book
+        width: 330px
+        text-transform: uppercase
+        background-color: $orange
+        display: flex
+        justify-content: center
+        align-items: center
+        border: none
+        color: white
+        font-size: inherit
+        transition: all .5s
+
+        &:hover, &:focus
+            background-color: darken($orange, 9%)
+        

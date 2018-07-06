@@ -1,0 +1,146 @@
+$color-signal: #ff6d20;
+$color-success: #4DD171;
+$color-warning: #fe4f3e;
+$color-light: #c1c7cd;
+$color-muted: #f7f9fa;
+
+$color-primary: darken($color-light, 34);
+
+
+%button-reset {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.picker {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  
+  &__input {
+    border: none;
+    font-size: 1.8rem;
+    width: 4.7rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    background: none;
+    border-bottom: 2px solid $color-primary;
+    color: $color-primary;
+    
+    &:focus {
+      outline: none;
+    }
+    
+    &:hover, 
+    &:focus {
+      background: white;
+      border-bottom-color: $color-signal;
+    }
+  }
+  
+  &__icon {
+    display: flex;
+    align-items: center;
+    color: $color-primary;
+    padding: 0 0.5rem;
+    border-bottom: 2px solid $color-primary;
+  }
+  
+  &__increment {
+    @extend %button-reset;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid $color-primary;
+    color: $color-primary;
+    
+    &:hover, 
+    &:focus {
+      border-bottom-color: $color-signal;
+      outline: none;
+      color: $color-signal;
+    }
+  }
+  
+  &__slot {
+    display: flex;
+  }
+  
+  &__controls {
+    position: relative;
+  }
+  
+  &__list {
+    visibility: hidden;
+    position: absolute;
+    min-width: 100%;
+    list-style: none;
+    padding: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    overflow: auto;
+    box-shadow: 0 0 12px rgba(black, 0.05), 0 3px 20px rgba(black, 0.1);
+    
+    &.is-open {
+      visibility: visible;
+    }
+    
+    &:focus {
+      outline: 1px solid $color-signal;
+    }
+    
+    li {
+      font-family: "Lato";
+      padding: 2rem;
+      cursor: pointer;
+      
+      &.is-highlighted {
+        background: $color-signal;
+        color: #fff;
+      }
+      
+      &:hover, 
+      &:focus {
+        outline: none;
+        background: $color-signal;
+        color: #fff;
+      }
+    }
+  }
+  
+  &__presets {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.5rem -0.5rem 0;
+    justify-content: center;
+  }
+
+  &__period {
+    @extend %button-reset;
+    padding: 0.75rem 1.25rem;
+    line-height: 1;
+    white-space: nobreak;
+    border-radius: 10em;
+    border: 2px solid $color-primary;
+    color: $color-primary;
+    font-weight: 400;
+    margin: 0.5rem;
+    
+    &:hover, 
+    &:focus {
+      outline: none;
+      border-color: $color-signal;
+      color: $color-signal; 
+    }
+    
+    &.is-pressed {
+      background-color: $color-signal;
+      border-color: $color-signal;
+      color: #fff;
+    }
+  }
+}

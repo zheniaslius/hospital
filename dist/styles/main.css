@@ -1,0 +1,234 @@
+body {
+  font: 16px "Raleway", sans-serif;
+  text-transform: uppercase; }
+
+button {
+  cursor: pointer; }
+  button:focus {
+    outline: 0; }
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0; }
+
+.number {
+  font: 500 4em "Lato", sans-serif; }
+
+.small {
+  font-size: 0.8rem; }
+
+.picker__increment, .picker__period {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer; }
+
+.picker {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center; }
+  .picker__input {
+    border: none;
+    font-size: 1.8rem;
+    width: 4.7rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    background: none;
+    border-bottom: 2px solid #64707c;
+    color: #64707c; }
+    .picker__input:focus {
+      outline: none; }
+    .picker__input:hover, .picker__input:focus {
+      background: white;
+      border-bottom-color: #ff6d20; }
+  .picker__icon {
+    display: flex;
+    align-items: center;
+    color: #64707c;
+    padding: 0 0.5rem;
+    border-bottom: 2px solid #64707c; }
+  .picker__increment {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #64707c;
+    color: #64707c; }
+    .picker__increment:hover, .picker__increment:focus {
+      border-bottom-color: #ff6d20;
+      outline: none;
+      color: #ff6d20; }
+  .picker__slot {
+    display: flex; }
+  .picker__controls {
+    position: relative; }
+  .picker__list {
+    visibility: hidden;
+    position: absolute;
+    min-width: 100%;
+    list-style: none;
+    padding: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    overflow: auto;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05), 0 3px 20px rgba(0, 0, 0, 0.1); }
+    .picker__list.is-open {
+      visibility: visible; }
+    .picker__list:focus {
+      outline: 1px solid #ff6d20; }
+    .picker__list li {
+      font-family: "Lato";
+      padding: 2rem;
+      cursor: pointer; }
+      .picker__list li.is-highlighted {
+        background: #ff6d20;
+        color: #fff; }
+      .picker__list li:hover, .picker__list li:focus {
+        outline: none;
+        background: #ff6d20;
+        color: #fff; }
+  .picker__presets {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.5rem -0.5rem 0;
+    justify-content: center; }
+  .picker__period {
+    padding: 0.75rem 1.25rem;
+    line-height: 1;
+    white-space: nobreak;
+    border-radius: 10em;
+    border: 2px solid #64707c;
+    color: #64707c;
+    font-weight: 400;
+    margin: 0.5rem; }
+    .picker__period:hover, .picker__period:focus {
+      outline: none;
+      border-color: #ff6d20;
+      color: #ff6d20; }
+    .picker__period.is-pressed {
+      background-color: #ff6d20;
+      border-color: #ff6d20;
+      color: #fff; }
+
+header {
+  background: url("/src/img/pexels-photo-1029614.jpeg") center no-repeat;
+  color: white;
+  font-size: 2em; }
+  header nav {
+    display: flex;
+    justify-content: space-between; }
+  header .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    header .logo .fa-hospital {
+      padding: 40px;
+      background-color: #ff6d20;
+      border-radius: 50%; }
+    header .logo .name {
+      margin-top: 20px;
+      font-weight: 400;
+      letter-spacing: 4px; }
+
+main {
+  font-weight: 600; }
+  main .action-desc {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between; }
+    main .action-desc .show-all {
+      color: #ff6d20; }
+  main .option-list {
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 20px; }
+    main .option-list .option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 180px;
+      padding: 30px 0;
+      outline: 1px solid #cbcbcb;
+      cursor: pointer;
+      transition: box-shadow 0.3s; }
+      main .option-list .option:focus, main .option-list .option:hover {
+        outline: 2px solid #ff6d20;
+        box-shadow: 0px 0px 21px -4px rgba(255, 109, 32, 0.41); }
+      main .option-list .option .day-of-week {
+        color: #b0b0b0; }
+  main .time-picker .from-to {
+    display: flex;
+    align-items: center; }
+    main .time-picker .from-to .picker {
+      margin-right: 60px; }
+    main .time-picker .from-to span, main .time-picker .from-to .add-icon {
+      text-transform: none;
+      margin-right: 20px;
+      font-weight: normal;
+      font-size: 2.5rem; }
+    main .time-picker .from-to .add-icon {
+      margin-left: 20px; }
+      main .time-picker .from-to .add-icon:hover, main .time-picker .from-to .add-icon:focus {
+        cursor: pointer;
+        color: #ff6d20; }
+
+footer {
+  font: 1.5rem "Lato";
+  border-style: inset;
+  border-left: 7px solid #ff6d20;
+  display: flex;
+  justify-content: space-between;
+  height: 135px;
+  box-shadow: 0px -1px 70px -24px rgba(0, 0, 0, 0.49); }
+  footer .doc-info {
+    padding-left: 40px;
+    display: flex;
+    align-items: center; }
+    footer .doc-info .photo {
+      height: 80px;
+      width: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 20px; }
+    footer .doc-info .name {
+      text-transform: none;
+      font-weight: 500; }
+  footer .footer-end {
+    display: flex; }
+  footer .details {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #cbcbcb;
+    border-left: 1px solid #cbcbcb; }
+    footer .details .capt {
+      position: relative;
+      bottom: 30px;
+      color: #b0b0b0;
+      font-weight: bold;
+      font-family: "Raleway"; }
+    footer .details .info {
+      text-transform: none; }
+    footer .details.cell-number {
+      border: none; }
+  footer .btn-book {
+    width: 330px;
+    text-transform: uppercase;
+    background-color: #ff6d20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: white;
+    font-size: inherit;
+    transition: all 0.5s; }
+    footer .btn-book:hover, footer .btn-book:focus {
+      background-color: #f15300; }
+
+/*# sourceMappingURL=main.css.map */

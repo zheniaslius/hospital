@@ -1,0 +1,15 @@
+{
+  "name": "hospital",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch src/styles:dist/styles"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "reset-css": "^4.0.1"
+  }
+}
