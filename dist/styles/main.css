@@ -134,7 +134,7 @@ main i, footer i {
       color: #fff; }
 
 header {
-  background: url("/src/img/pexels-photo-1029614.jpeg") center no-repeat;
+  background: url("./src/img/pexels-photo-1029614.jpeg") center no-repeat;
   color: white;
   font-size: 2em; }
   header nav {
@@ -305,6 +305,7 @@ footer {
       margin-top: 3em; }
 
   footer {
+    height: 1150px;
     font-size: 1rem; }
     footer .doc-info {
       padding-left: 1.2em; }
