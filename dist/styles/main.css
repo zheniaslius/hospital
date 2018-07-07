@@ -1,11 +1,22 @@
+html {
+  font-size: 16px; }
+
 body {
-  font: 16px "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase; }
 
 button {
-  cursor: pointer; }
-  button:focus {
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: #ff6d20;
+  transition: all 0.5s; }
+  button:focus, button:hover {
+    background-color: #f15300;
     outline: 0; }
+
+a {
+  text-decoration: none; }
 
 .container {
   width: 90%;
@@ -17,6 +28,14 @@ button {
 
 .small {
   font-size: 0.8rem; }
+
+.left {
+  display: flex;
+  align-items: center; }
+
+main i, footer i {
+  margin-right: 5px;
+  font-size: 1.3rem; }
 
 .picker__increment, .picker__period {
   font-size: 1.5rem;
@@ -32,7 +51,7 @@ button {
     border: none;
     font-size: 1.8rem;
     width: 4.7rem;
-    padding: 1.5rem 0;
+    padding: .5rem 0;
     text-align: center;
     background: none;
     border-bottom: 2px solid #64707c;
@@ -58,6 +77,8 @@ button {
       outline: none;
       color: #ff6d20; }
   .picker__slot {
+    position: relative;
+    top: 7px;
     display: flex; }
   .picker__controls {
     position: relative; }
@@ -119,6 +140,11 @@ header {
   header nav {
     display: flex;
     justify-content: space-between; }
+    header nav i {
+      cursor: pointer;
+      transition: all 0.5s; }
+      header nav i:hover {
+        color: #0DFFFB; }
   header .logo {
     display: flex;
     flex-direction: column;
@@ -128,6 +154,7 @@ header {
       background-color: #ff6d20;
       border-radius: 50%; }
     header .logo .name {
+      text-align: center;
       margin-top: 20px;
       font-weight: 400;
       letter-spacing: 4px; }
@@ -138,28 +165,65 @@ main {
     margin-bottom: 40px;
     display: flex;
     justify-content: space-between; }
-    main .action-desc .show-all {
-      color: #ff6d20; }
+    main .action-desc .show-all a {
+      color: #ff8e53; }
   main .option-list {
     margin-bottom: 80px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     grid-template-rows: auto;
     grid-gap: 20px; }
     main .option-list .option {
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-width: 180px;
       padding: 30px 0;
       outline: 1px solid #cbcbcb;
       cursor: pointer;
       transition: box-shadow 0.3s; }
-      main .option-list .option:focus, main .option-list .option:hover {
+      main .option-list .option:focus, main .option-list .option:hover, main .option-list .option.selected {
         outline: 2px solid #ff6d20;
         box-shadow: 0px 0px 21px -4px rgba(255, 109, 32, 0.41); }
       main .option-list .option .day-of-week {
         color: #b0b0b0; }
+  main .main-bot {
+    display: flex;
+    justify-content: space-between; }
+    main .main-bot .my-shifts {
+      margin-left: 2em; }
+      main .main-bot .my-shifts .shifts-wrp {
+        display: flex;
+        flex-wrap: wrap; }
+      main .main-bot .my-shifts .small {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px; }
+      main .main-bot .my-shifts .shift {
+        margin: 0 20px 20px 0;
+        font-family: "Lato";
+        box-shadow: 0 5px 14px -4px rgba(0, 0, 0, 0.1);
+        min-width: 150px;
+        transition: all 0.2s ease-in;
+        cursor: pointer; }
+        main .main-bot .my-shifts .shift:hover {
+          transform: scale(1.05); }
+        main .main-bot .my-shifts .shift .shift-top {
+          display: flex;
+          justify-content: space-between;
+          text-transform: none;
+          padding: 10px 20px;
+          color: white;
+          background-color: #ff7e3a; }
+          main .main-bot .my-shifts .shift .shift-top i {
+            position: relative;
+            left: 15px;
+            font-size: 1.3rem; }
+            main .main-bot .my-shifts .shift .shift-top i:hover {
+              color: #f15300; }
+        main .main-bot .my-shifts .shift .shift-bot {
+          padding: 30px 20px; }
+  main .time-picker .left {
+    margin-bottom: 40px; }
   main .time-picker .from-to {
     display: flex;
     align-items: center; }
@@ -171,12 +235,20 @@ main {
       font-weight: normal;
       font-size: 2.5rem; }
     main .time-picker .from-to .add-icon {
-      margin-left: 20px; }
-      main .time-picker .from-to .add-icon:hover, main .time-picker .from-to .add-icon:focus {
-        cursor: pointer;
-        color: #ff6d20; }
+      cursor: pointer;
+      color: #ff6d20; }
+      main .time-picker .from-to .add-icon:hover {
+        color: #f15300; }
+    main .time-picker .from-to button.add-shift {
+      padding: 1em 2em;
+      display: flex;
+      align-items: flex-end; }
+      main .time-picker .from-to button.add-shift span {
+        margin-right: 0;
+        font-size: 1.5em; }
 
 footer {
+  margin-top: 100px;
   font: 1.5rem "Lato";
   border-style: inset;
   border-left: 7px solid #ff6d20;
@@ -185,7 +257,7 @@ footer {
   height: 135px;
   box-shadow: 0px -1px 70px -24px rgba(0, 0, 0, 0.49); }
   footer .doc-info {
-    padding-left: 40px;
+    padding-left: 2em;
     display: flex;
     align-items: center; }
     footer .doc-info .photo {
@@ -200,17 +272,19 @@ footer {
   footer .footer-end {
     display: flex; }
   footer .details {
-    padding: 30px;
+    position: relative;
+    padding: 0 4em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-right: 1px solid #cbcbcb;
     border-left: 1px solid #cbcbcb; }
+    footer .details .left {
+      top: 12px;
+      position: absolute;
+      color: #b0b0b0; }
     footer .details .capt {
-      position: relative;
-      bottom: 30px;
-      color: #b0b0b0;
       font-weight: bold;
       font-family: "Raleway"; }
     footer .details .info {
@@ -218,17 +292,62 @@ footer {
     footer .details.cell-number {
       border: none; }
   footer .btn-book {
-    width: 330px;
+    padding: 0 5em;
     text-transform: uppercase;
-    background-color: #ff6d20;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    color: white;
-    font-size: inherit;
-    transition: all 0.5s; }
-    footer .btn-book:hover, footer .btn-book:focus {
-      background-color: #f15300; }
+    font-size: inherit; }
+
+@media all and (max-width: 1625px) {
+  main .main-bot {
+    flex-direction: column;
+    align-items: flex-start; }
+    main .main-bot .my-shifts {
+      margin-left: 0;
+      margin-top: 3em; }
+
+  footer {
+    font-size: 1rem; }
+    footer .doc-info {
+      padding-left: 1.2em; }
+    footer .details {
+      padding: 0 2.3em; }
+    footer .btn-book {
+      padding: 0 3.7em; } }
+@media all and (max-width: 769px) {
+  main .time-picker .from-to {
+    flex-direction: column;
+    align-items: flex-start; }
+    main .time-picker .from-to .picker {
+      margin: 0 0 2.5rem 0; }
+      main .time-picker .from-to .picker:last-of-type {
+        align-self: flex-end;
+        z-index: -1; }
+    main .time-picker .from-to button.add-shift {
+      align-self: center;
+      z-index: -1; }
+
+  .day-of-week {
+    font-size: 0.9em; }
+
+  .number {
+    font-size: 3em; }
+
+  footer {
+    height: 100%;
+    flex-direction: column; }
+    footer .doc-info {
+      padding: 1em; }
+      footer .doc-info .photo {
+        width: 50px;
+        height: 50px; }
+    footer .footer-end {
+      flex-direction: column; }
+      footer .footer-end > div {
+        padding: 1em; }
+    footer .details {
+      border: none; }
+      footer .details .left {
+        top: -7px; }
+    footer .btn-book {
+      padding: 1.1em 3em; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -15,9 +15,6 @@ let keys = {
   let incrementButtons = document.querySelectorAll('.picker__increment');
   incrementButtons = [...incrementButtons];
   
-  let presetRow = document.querySelector('.picker__presets');
-  
-  
   let presetButtons = document.querySelectorAll('.picker__period');
   presetButtons = [...presetButtons];
   

@@ -1,0 +1,75 @@
+@media all and (max-width: 1625px)
+
+    main
+        .main-bot
+            flex-direction: column
+            align-items: flex-start
+
+            .my-shifts
+                margin-left: 0
+                margin-top: 3em
+    
+    footer
+        font-size: 1rem
+
+        .doc-info
+            padding-left: 1.2em
+
+        .details
+            padding: 0 2.3em
+
+        .btn-book
+            padding: 0 3.7em
+
+@media all and (max-width: 769px)
+
+    main 
+        .time-picker 
+            .from-to
+                flex-direction: column
+                align-items: flex-start
+
+                .picker
+                    margin: 0 0 2.5rem 0
+
+                    &:last-of-type
+                        align-self: flex-end
+                        z-index: -1
+                    
+                button.add-shift
+                    align-self: center
+                    z-index: -1
+                    
+    .day-of-week
+        font-size: .9em
+    
+    .number
+        font-size: 3em
+
+    footer
+        height: 100%
+        flex-direction: column
+
+        .doc-info
+            padding: 1em
+
+            .photo
+                width: 50px
+                height: 50px
+
+        .footer-end
+            flex-direction: column
+
+            > div
+                padding: 1em
+
+        .details
+            border: none
+
+            .left
+                top: -7px
+
+        .btn-book
+            padding: 1.1em 3em
+            
+

@@ -1,12 +1,25 @@
+@import vars
+    
+html
+    font-size: 16px
+
 body
-    font: 16px 'Raleway', sans-serif
+    font-family: 'Raleway', sans-serif
     text-transform: uppercase
 
 button
+    border: none
     cursor: pointer
+    color: white
+    background-color: $orange
+    transition: all .5s
 
-    &:focus
+    &:focus, &:hover
+        background-color: $dark-orange
         outline: 0
+
+a
+    text-decoration: none
 
 .container
     width: 90%
@@ -18,4 +31,13 @@ button
 
 .small
     font-size: .8rem
-    
+
+
+.left
+    display: flex
+    align-items: center
+
+main, footer
+    i
+        margin-right: 5px
+        font-size: 1.3rem
