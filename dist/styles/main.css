@@ -191,10 +191,20 @@ main {
         margin-top: 10px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         color: #f65500; }
         main .option-list .option .my-shifts .shift {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           margin-bottom: 10px; }
+          main .option-list .option .my-shifts .shift .close {
+            position: relative;
+            top: 2px;
+            margin: 0;
+            font-size: inherit;
+            margin-left: 15px; }
   main .main-bot {
     display: flex;
     justify-content: space-between; }

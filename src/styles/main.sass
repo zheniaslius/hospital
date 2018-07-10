@@ -73,11 +73,22 @@ main
                 margin-top: 10px
                 display: flex
                 flex-direction: column
-                align-items: center
+                align-items: flex-start
                 color: darken($orange, 8%)
 
                 .shift
+                    width: 100%
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
                     margin-bottom: 10px
+
+                    .close
+                        position: relative
+                        top: 2px
+                        margin: 0
+                        font-size: inherit
+                        margin-left: 15px
     
     .main-bot
         display: flex
