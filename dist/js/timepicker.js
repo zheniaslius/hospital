@@ -269,5 +269,3 @@ let keys = {
     }
   })
   
-  // Start off the demo
-  togglePreset(document.querySelector(`.picker__period[data-time="${input.value}"]`));

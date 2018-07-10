@@ -50,6 +50,7 @@ main
         display: grid
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr))
         grid-template-rows: auto
+        align-items: start
         grid-gap: 20px
 
         .option
@@ -67,54 +68,20 @@ main
 
             .day-of-week
                 color: $grey
+
+            .my-shifts
+                margin-top: 10px
+                display: flex
+                flex-direction: column
+                align-items: center
+                color: darken($orange, 8%)
+
+                .shift
+                    margin-bottom: 10px
     
     .main-bot
         display: flex
         justify-content: space-between
-        
-        .my-shifts
-            margin-left: 2em
-
-            .shifts-wrp
-                display: flex
-                flex-wrap: wrap
-            
-            .small
-                display: flex
-                align-items: center
-                margin-bottom: 40px
-
-            .shift
-                margin: 0 20px 20px 0
-                font-family: "Lato"
-                box-shadow: 0 5px 14px -4px rgba(0,0,0,0.1)
-                min-width: 150px
-                transition: all .2s ease-in
-                cursor: pointer
-
-                &:hover
-                    transform: scale(1.05)
-
-                .shift-top
-                    display: flex
-                    justify-content: space-between
-                    text-transform: none
-                    padding: 10px 20px
-                    color: white
-                    background-color: lighten($orange, 5%)
-
-                    i
-                        position: relative
-                        left: 15px
-                        font-size: 1.3rem
-
-                        &:hover
-                            color: $dark-orange
-
-
-                .shift-bot
-                    padding: 30px 20px
-
 
     .time-picker
         
@@ -151,8 +118,8 @@ main
                     font-size: 1.5em
 
 footer
-    margin-top: 100px
-    font: 1.5rem "Lato"
+    margin-top: 135px
+    font: 1.3rem "Lato"
     border-style: inset
     border-left: 7px solid $orange
     display: flex
